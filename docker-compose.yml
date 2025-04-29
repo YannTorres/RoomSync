@@ -1,0 +1,20 @@
+services:
+  userservice.api:
+    image: ${DOCKER_REGISTRY-}userserviceapi
+    build:
+      context: .
+      dockerfile: src/UserService/UserService.API/Dockerfile
+
+  reservationservice.api:
+    image: ${DOCKER_REGISTRY-}reservationserviceapi
+    build:
+      context: .
+      dockerfile: src/ReservationService/ReservationService.API/Dockerfile
+
+
+  notificationservice.api:
+    image: ${DOCKER_REGISTRY-}notificationserviceapi
+    build:
+      context: .
+      dockerfile: NotificationService.API/Dockerfile
+
